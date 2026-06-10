@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build SFML",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=c++17",
+        "${workspaceFolder}/*.cpp",
+
+        "-I", "C:/SFML-2.6.2/include",
+        "-L", "C:/SFML-2.6.2/lib",
+
+        "-lsfml-graphics",
+        "-lsfml-window",
+        "-lsfml-system",
+
+        "-o",
+        "${workspaceFolder}/main.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
